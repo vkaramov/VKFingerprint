@@ -1,0 +1,784 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05C0BC6E1F2303B75A8BCE1F76AB0C54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03537BA95F85489E078357D35707B1B /* Foundation.framework */; };
+		075990EF7428DA93A685C6644933E4A3 /* VKFingerprint.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0445702652B9680F5EA84BAAA2E88E3 /* VKFingerprint.bundle */; };
+		39022F0F10F72ED762F3BA7DFE15E6FC /* Pods-VKFingerprint_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4D52880937899129DDC4FE2B5397CE /* Pods-VKFingerprint_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C676EF65DF3D27D37E0FEE0D69AB833 /* VKFingerprint-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CB39A49026AD877B69E7515686833E5 /* VKFingerprint-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BAC9034BA881F8E43ECE4B8F94BB50A /* Pods-VKFingerprint_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABB230729BA6AF822ACE9D96C3E5F10 /* Pods-VKFingerprint_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABC172643A617E2D6F15087BE035FC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03537BA95F85489E078357D35707B1B /* Foundation.framework */; };
+		B10CAAA8CC9018C0505FFAF4675709E8 /* Pods-VKFingerprint_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8DAEB7464462D71172E307F6B8509 /* Pods-VKFingerprint_Example-dummy.m */; };
+		C1BF98303FE365A5DBC6E277072F5359 /* Pods-VKFingerprint_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B75714A621EBA322B520C005ED904A /* Pods-VKFingerprint_Tests-dummy.m */; };
+		D89CB3687D9C99B0F8935BF4C6BBA0E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03537BA95F85489E078357D35707B1B /* Foundation.framework */; };
+		EC042F7081AC6048EDDD6EADBCA200D6 /* VKFingerprint-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B98BC39E433D54F895E377111005D8 /* VKFingerprint-dummy.m */; };
+		EF14EBD91BC2AE3700C09CE1 /* VKFingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14EBD71BC2AE3700C09CE1 /* VKFingerprint.swift */; settings = {ASSET_TAGS = (); }; };
+		EF14EBDA1BC2AE3700C09CE1 /* VKKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14EBD81BC2AE3700C09CE1 /* VKKeychain.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DF9885283324393CD8900A2810DA543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 042E60EC50716203BEEA41BCBE22312F;
+			remoteInfo = VKFingerprint;
+		};
+		8AD2BE79766BD05B4DF7554F4074B04B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F65E77B2EDB1EB89F63C63B00552E37;
+			remoteInfo = "VKFingerprint-VKFingerprint";
+		};
+		9CD571CC5B8D7834530FBF8972DFA1D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 042E60EC50716203BEEA41BCBE22312F;
+			remoteInfo = VKFingerprint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0293A9C9AC3CFDD4D1D5A8EFB12EC9C1 /* VKFingerprint.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VKFingerprint.modulemap; sourceTree = "<group>"; };
+		1ABB230729BA6AF822ACE9D96C3E5F10 /* Pods-VKFingerprint_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VKFingerprint_Example-umbrella.h"; sourceTree = "<group>"; };
+		225D0C1C0AC07383ACC9654660D8EFF3 /* VKFingerprint-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VKFingerprint-prefix.pch"; sourceTree = "<group>"; };
+		2CC20DF3E8DA825F381EF65D788350B2 /* Pods_VKFingerprint_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKFingerprint_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4D52880937899129DDC4FE2B5397CE /* Pods-VKFingerprint_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VKFingerprint_Tests-umbrella.h"; sourceTree = "<group>"; };
+		32BAA26F764792AFDDF6679C4C6D79B8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3609E62CBB81133B0B8BC6B931442B78 /* Pods-VKFingerprint_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VKFingerprint_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3B60A8B2F8B7177C2D2AB077B3235937 /* Pods-VKFingerprint_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VKFingerprint_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3F63D94177AD9006F7C9CA353AA47224 /* Pods-VKFingerprint_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VKFingerprint_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		528EE33EEE33875F5831231553572446 /* Pods-VKFingerprint_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VKFingerprint_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		59D8F7ECFA845D2F9D72D0C0FEA71D6C /* Pods-VKFingerprint_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VKFingerprint_Tests-resources.sh"; sourceTree = "<group>"; };
+		61F1C8B55F6E7FEEBAA88A23E6F977D7 /* VKFingerprint-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "VKFingerprint-Private.xcconfig"; sourceTree = "<group>"; };
+		65B98BC39E433D54F895E377111005D8 /* VKFingerprint-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VKFingerprint-dummy.m"; sourceTree = "<group>"; };
+		6B5605319F9F05FBDB33DECAABB1BE50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BB0E92B03988B3818083C8AD1FC4CDE /* Pods-VKFingerprint_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VKFingerprint_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7CB39A49026AD877B69E7515686833E5 /* VKFingerprint-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VKFingerprint-umbrella.h"; sourceTree = "<group>"; };
+		83019AD98B95958F7F9A0B39CE1978F7 /* Pods-VKFingerprint_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VKFingerprint_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8E4E29D9E4EB8BFC158E32EC6F9B0EF7 /* VKFingerprint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VKFingerprint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F956257518C0DA623F25913D9F68A0D /* Pods-VKFingerprint_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VKFingerprint_Tests.modulemap"; sourceTree = "<group>"; };
+		AD6D4662F05B9C5BFCE6F41252B05FCA /* Pods-VKFingerprint_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VKFingerprint_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B17B5ABFF2461DD1284E3E4944D85AE4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C03537BA95F85489E078357D35707B1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C120B080126E25AC00F9C1C0C51FEBC7 /* VKFingerprint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VKFingerprint.xcconfig; sourceTree = "<group>"; };
+		D0445702652B9680F5EA84BAAA2E88E3 /* VKFingerprint.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKFingerprint.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21D3B6ADEBAB0329E3F36D392572326 /* Pods-VKFingerprint_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VKFingerprint_Example.modulemap"; sourceTree = "<group>"; };
+		D5066121796D3CC33C6116FDB9CA3FBB /* Pods-VKFingerprint_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VKFingerprint_Example-resources.sh"; sourceTree = "<group>"; };
+		DEE8DAEB7464462D71172E307F6B8509 /* Pods-VKFingerprint_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VKFingerprint_Example-dummy.m"; sourceTree = "<group>"; };
+		E1236C02D3E49BDEB5E0950FDD5441B0 /* Pods-VKFingerprint_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VKFingerprint_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E5B35D83CFB7396FEB6D83B57F975751 /* Pods_VKFingerprint_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKFingerprint_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA974BB43B9E77589230B9C3EDEAF62B /* Pods-VKFingerprint_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VKFingerprint_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EF14EBD71BC2AE3700C09CE1 /* VKFingerprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKFingerprint.swift; sourceTree = "<group>"; };
+		EF14EBD81BC2AE3700C09CE1 /* VKKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKKeychain.swift; sourceTree = "<group>"; };
+		F6B75714A621EBA322B520C005ED904A /* Pods-VKFingerprint_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VKFingerprint_Tests-dummy.m"; sourceTree = "<group>"; };
+		FEB05DC0AFDC8E78714AF9058AE809FF /* Pods-VKFingerprint_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VKFingerprint_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13D000983F82F69E4FDADDDBD1AEBA3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABC172643A617E2D6F15087BE035FC8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		434B4DC42909A54F68B0F68CADE4020E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C0BC6E1F2303B75A8BCE1F76AB0C54 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		503ADD6E7BD62C0C834A2F50088B6EF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A259AA529649C6515766A1EB1379FD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89CB3687D9C99B0F8935BF4C6BBA0E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2ABEE0D4EA7B6329DDF22EFB29299F44 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9B7A2DC7574D7BA4CF4A246C7673D02F /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		46B3390E3C6222B79626AA57F7A41C22 /* VKFingerprint */ = {
+			isa = PBXGroup;
+			children = (
+				2ABEE0D4EA7B6329DDF22EFB29299F44 /* Pod */,
+				BD416781B4B7BA5C15DD879BB7CA6C26 /* Support Files */,
+			);
+			name = VKFingerprint;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C03537BA95F85489E078357D35707B1B /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		55DE3536F30DE1C1ADB4CE6D402AF3C9 /* Pods-VKFingerprint_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				32BAA26F764792AFDDF6679C4C6D79B8 /* Info.plist */,
+				9F956257518C0DA623F25913D9F68A0D /* Pods-VKFingerprint_Tests.modulemap */,
+				FEB05DC0AFDC8E78714AF9058AE809FF /* Pods-VKFingerprint_Tests-acknowledgements.markdown */,
+				3B60A8B2F8B7177C2D2AB077B3235937 /* Pods-VKFingerprint_Tests-acknowledgements.plist */,
+				F6B75714A621EBA322B520C005ED904A /* Pods-VKFingerprint_Tests-dummy.m */,
+				528EE33EEE33875F5831231553572446 /* Pods-VKFingerprint_Tests-frameworks.sh */,
+				59D8F7ECFA845D2F9D72D0C0FEA71D6C /* Pods-VKFingerprint_Tests-resources.sh */,
+				2D4D52880937899129DDC4FE2B5397CE /* Pods-VKFingerprint_Tests-umbrella.h */,
+				7BB0E92B03988B3818083C8AD1FC4CDE /* Pods-VKFingerprint_Tests.debug.xcconfig */,
+				83019AD98B95958F7F9A0B39CE1978F7 /* Pods-VKFingerprint_Tests.release.xcconfig */,
+			);
+			name = "Pods-VKFingerprint_Tests";
+			path = "Target Support Files/Pods-VKFingerprint_Tests";
+			sourceTree = "<group>";
+		};
+		79E617A3D2B9CA3E0258CE34FF83BCD4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7A57032D6A0E8821CA8BE6374E84025 /* Pods-VKFingerprint_Example */,
+				55DE3536F30DE1C1ADB4CE6D402AF3C9 /* Pods-VKFingerprint_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				ED7CE2E65941CF09EBA6953C9C1492D1 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				79E617A3D2B9CA3E0258CE34FF83BCD4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9B7A2DC7574D7BA4CF4A246C7673D02F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EF14EBD71BC2AE3700C09CE1 /* VKFingerprint.swift */,
+				EF14EBD81BC2AE3700C09CE1 /* VKKeychain.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A7A57032D6A0E8821CA8BE6374E84025 /* Pods-VKFingerprint_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6B5605319F9F05FBDB33DECAABB1BE50 /* Info.plist */,
+				D21D3B6ADEBAB0329E3F36D392572326 /* Pods-VKFingerprint_Example.modulemap */,
+				3609E62CBB81133B0B8BC6B931442B78 /* Pods-VKFingerprint_Example-acknowledgements.markdown */,
+				3F63D94177AD9006F7C9CA353AA47224 /* Pods-VKFingerprint_Example-acknowledgements.plist */,
+				DEE8DAEB7464462D71172E307F6B8509 /* Pods-VKFingerprint_Example-dummy.m */,
+				AD6D4662F05B9C5BFCE6F41252B05FCA /* Pods-VKFingerprint_Example-frameworks.sh */,
+				D5066121796D3CC33C6116FDB9CA3FBB /* Pods-VKFingerprint_Example-resources.sh */,
+				1ABB230729BA6AF822ACE9D96C3E5F10 /* Pods-VKFingerprint_Example-umbrella.h */,
+				EA974BB43B9E77589230B9C3EDEAF62B /* Pods-VKFingerprint_Example.debug.xcconfig */,
+				E1236C02D3E49BDEB5E0950FDD5441B0 /* Pods-VKFingerprint_Example.release.xcconfig */,
+			);
+			name = "Pods-VKFingerprint_Example";
+			path = "Target Support Files/Pods-VKFingerprint_Example";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD416781B4B7BA5C15DD879BB7CA6C26 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B17B5ABFF2461DD1284E3E4944D85AE4 /* Info.plist */,
+				0293A9C9AC3CFDD4D1D5A8EFB12EC9C1 /* VKFingerprint.modulemap */,
+				C120B080126E25AC00F9C1C0C51FEBC7 /* VKFingerprint.xcconfig */,
+				61F1C8B55F6E7FEEBAA88A23E6F977D7 /* VKFingerprint-Private.xcconfig */,
+				65B98BC39E433D54F895E377111005D8 /* VKFingerprint-dummy.m */,
+				225D0C1C0AC07383ACC9654660D8EFF3 /* VKFingerprint-prefix.pch */,
+				7CB39A49026AD877B69E7515686833E5 /* VKFingerprint-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VKFingerprint";
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5B35D83CFB7396FEB6D83B57F975751 /* Pods_VKFingerprint_Example.framework */,
+				2CC20DF3E8DA825F381EF65D788350B2 /* Pods_VKFingerprint_Tests.framework */,
+				D0445702652B9680F5EA84BAAA2E88E3 /* VKFingerprint.bundle */,
+				8E4E29D9E4EB8BFC158E32EC6F9B0EF7 /* VKFingerprint.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED7CE2E65941CF09EBA6953C9C1492D1 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46B3390E3C6222B79626AA57F7A41C22 /* VKFingerprint */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		11C346164CC3819B01FC707ADEB33C7F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAC9034BA881F8E43ECE4B8F94BB50A /* Pods-VKFingerprint_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E2882A2F04A8A1C63DB1D8CE0048C8C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39022F0F10F72ED762F3BA7DFE15E6FC /* Pods-VKFingerprint_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFD5FC04CF4277399DEA370D164FA8C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C676EF65DF3D27D37E0FEE0D69AB833 /* VKFingerprint-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		042E60EC50716203BEEA41BCBE22312F /* VKFingerprint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17498240BF8CC0A628EEC314733B609D /* Build configuration list for PBXNativeTarget "VKFingerprint" */;
+			buildPhases = (
+				7CE85FC4CEF15600EA45B22FB3465316 /* Sources */,
+				13D000983F82F69E4FDADDDBD1AEBA3D /* Frameworks */,
+				93B7AB188C718242D196D8C7104FB421 /* Resources */,
+				FAFD5FC04CF4277399DEA370D164FA8C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09A2F7ACD38F64FD480E2E5F3777990D /* PBXTargetDependency */,
+			);
+			name = VKFingerprint;
+			productName = VKFingerprint;
+			productReference = 8E4E29D9E4EB8BFC158E32EC6F9B0EF7 /* VKFingerprint.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6F209C3517196C3CDC27F5233C6337F8 /* Pods-VKFingerprint_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1ACCC786529F308CB334FC4B3A2EFFA /* Build configuration list for PBXNativeTarget "Pods-VKFingerprint_Tests" */;
+			buildPhases = (
+				4D74557C588965B64B06DC66D3842C0B /* Sources */,
+				434B4DC42909A54F68B0F68CADE4020E /* Frameworks */,
+				3E2882A2F04A8A1C63DB1D8CE0048C8C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AE5AD0331CA72B7F0DC5CA182B0C5E3 /* PBXTargetDependency */,
+			);
+			name = "Pods-VKFingerprint_Tests";
+			productName = "Pods-VKFingerprint_Tests";
+			productReference = 2CC20DF3E8DA825F381EF65D788350B2 /* Pods_VKFingerprint_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7F65E77B2EDB1EB89F63C63B00552E37 /* VKFingerprint-VKFingerprint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5293D1B18FBF435CA07BC3E3C90BE807 /* Build configuration list for PBXNativeTarget "VKFingerprint-VKFingerprint" */;
+			buildPhases = (
+				27140C1A4F70396035EAF3BAD944F4B9 /* Sources */,
+				503ADD6E7BD62C0C834A2F50088B6EF2 /* Frameworks */,
+				D3B42EDEE163C1F9882C7019DC166F6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VKFingerprint-VKFingerprint";
+			productName = "VKFingerprint-VKFingerprint";
+			productReference = D0445702652B9680F5EA84BAAA2E88E3 /* VKFingerprint.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C5F3B91395F225228EE15A78AA0E56D3 /* Pods-VKFingerprint_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2A0D848F601F31FB9D5B5BD72D97C7A /* Build configuration list for PBXNativeTarget "Pods-VKFingerprint_Example" */;
+			buildPhases = (
+				5C6FA4F3F835DDC3ACB5CBF2EB978B95 /* Sources */,
+				8A259AA529649C6515766A1EB1379FD4 /* Frameworks */,
+				11C346164CC3819B01FC707ADEB33C7F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15914288407D63E601847F993AEF8AE7 /* PBXTargetDependency */,
+			);
+			name = "Pods-VKFingerprint_Example";
+			productName = "Pods-VKFingerprint_Example";
+			productReference = E5B35D83CFB7396FEB6D83B57F975751 /* Pods_VKFingerprint_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5F3B91395F225228EE15A78AA0E56D3 /* Pods-VKFingerprint_Example */,
+				6F209C3517196C3CDC27F5233C6337F8 /* Pods-VKFingerprint_Tests */,
+				042E60EC50716203BEEA41BCBE22312F /* VKFingerprint */,
+				7F65E77B2EDB1EB89F63C63B00552E37 /* VKFingerprint-VKFingerprint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93B7AB188C718242D196D8C7104FB421 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075990EF7428DA93A685C6644933E4A3 /* VKFingerprint.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B42EDEE163C1F9882C7019DC166F6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27140C1A4F70396035EAF3BAD944F4B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D74557C588965B64B06DC66D3842C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1BF98303FE365A5DBC6E277072F5359 /* Pods-VKFingerprint_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C6FA4F3F835DDC3ACB5CBF2EB978B95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10CAAA8CC9018C0505FFAF4675709E8 /* Pods-VKFingerprint_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CE85FC4CEF15600EA45B22FB3465316 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC042F7081AC6048EDDD6EADBCA200D6 /* VKFingerprint-dummy.m in Sources */,
+				EF14EBD91BC2AE3700C09CE1 /* VKFingerprint.swift in Sources */,
+				EF14EBDA1BC2AE3700C09CE1 /* VKKeychain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09A2F7ACD38F64FD480E2E5F3777990D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VKFingerprint-VKFingerprint";
+			target = 7F65E77B2EDB1EB89F63C63B00552E37 /* VKFingerprint-VKFingerprint */;
+			targetProxy = 8AD2BE79766BD05B4DF7554F4074B04B /* PBXContainerItemProxy */;
+		};
+		0AE5AD0331CA72B7F0DC5CA182B0C5E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VKFingerprint;
+			target = 042E60EC50716203BEEA41BCBE22312F /* VKFingerprint */;
+			targetProxy = 2DF9885283324393CD8900A2810DA543 /* PBXContainerItemProxy */;
+		};
+		15914288407D63E601847F993AEF8AE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VKFingerprint;
+			target = 042E60EC50716203BEEA41BCBE22312F /* VKFingerprint */;
+			targetProxy = 9CD571CC5B8D7834530FBF8972DFA1D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B227A690FEEAB6560816DED6153D843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61F1C8B55F6E7FEEBAA88A23E6F977D7 /* VKFingerprint-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = VKFingerprint;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		2C88476E706552AC14A345B866D1854B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1236C02D3E49BDEB5E0950FDD5441B0 /* Pods-VKFingerprint_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VKFingerprint_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-VKFingerprint_Example/Pods-VKFingerprint_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VKFingerprint_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2E977824DAA62E9D09F376C7F6F63E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61F1C8B55F6E7FEEBAA88A23E6F977D7 /* VKFingerprint-Private.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VKFingerprint/VKFingerprint-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VKFingerprint/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VKFingerprint/VKFingerprint.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = VKFingerprint;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9AAD13E7006F3B8802A299E388A00818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83019AD98B95958F7F9A0B39CE1978F7 /* Pods-VKFingerprint_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VKFingerprint_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-VKFingerprint_Tests/Pods-VKFingerprint_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VKFingerprint_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2F32B744CE0222483F823A6B75059DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA974BB43B9E77589230B9C3EDEAF62B /* Pods-VKFingerprint_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VKFingerprint_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-VKFingerprint_Example/Pods-VKFingerprint_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VKFingerprint_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ABC474F238AE45DB101110E8E380E23E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61F1C8B55F6E7FEEBAA88A23E6F977D7 /* VKFingerprint-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = VKFingerprint;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BEA527FFDB1C58651D817CDF33A7F8D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61F1C8B55F6E7FEEBAA88A23E6F977D7 /* VKFingerprint-Private.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VKFingerprint/VKFingerprint-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VKFingerprint/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VKFingerprint/VKFingerprint.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = VKFingerprint;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EAD547B2961D3221CE3F0DBEF237B1CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BB0E92B03988B3818083C8AD1FC4CDE /* Pods-VKFingerprint_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VKFingerprint_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-VKFingerprint_Tests/Pods-VKFingerprint_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VKFingerprint_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17498240BF8CC0A628EEC314733B609D /* Build configuration list for PBXNativeTarget "VKFingerprint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E977824DAA62E9D09F376C7F6F63E4C /* Debug */,
+				BEA527FFDB1C58651D817CDF33A7F8D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5293D1B18FBF435CA07BC3E3C90BE807 /* Build configuration list for PBXNativeTarget "VKFingerprint-VKFingerprint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B227A690FEEAB6560816DED6153D843 /* Debug */,
+				ABC474F238AE45DB101110E8E380E23E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1ACCC786529F308CB334FC4B3A2EFFA /* Build configuration list for PBXNativeTarget "Pods-VKFingerprint_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD547B2961D3221CE3F0DBEF237B1CE /* Debug */,
+				9AAD13E7006F3B8802A299E388A00818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2A0D848F601F31FB9D5B5BD72D97C7A /* Build configuration list for PBXNativeTarget "Pods-VKFingerprint_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2F32B744CE0222483F823A6B75059DA /* Debug */,
+				2C88476E706552AC14A345B866D1854B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

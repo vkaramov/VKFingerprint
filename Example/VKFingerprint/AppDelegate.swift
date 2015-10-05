@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  VKFingerprint
 //
-//  Created by Viacheslav Karamov on 10/05/2015.
+//  Created by Viacheslav Karamov on 05.10.15.
 //  Copyright (c) 2015 Viacheslav Karamov. All rights reserved.
 //
 

@@ -1,15 +1,10 @@
 # VKFingerprint
 
-[![CI Status](http://img.shields.io/travis/Viacheslav Karamov/VKFingerprint.svg?style=flat)](https://travis-ci.org/Viacheslav Karamov/VKFingerprint)
-[![Version](https://img.shields.io/cocoapods/v/VKFingerprint.svg?style=flat)](http://cocoapods.org/pods/VKFingerprint)
-[![License](https://img.shields.io/cocoapods/l/VKFingerprint.svg?style=flat)](http://cocoapods.org/pods/VKFingerprint)
-[![Platform](https://img.shields.io/cocoapods/p/VKFingerprint.svg?style=flat)](http://cocoapods.org/pods/VKFingerprint)
-
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+VKFingerprint is a lightweight fingerprint library written in Swift. Enables fingerprint scanner usage for the capable iOS devices.
 
 ## Requirements
+Xcode 7.0 or later
+iOS 8.2 or later
 
 ## Installation
 
@@ -17,12 +12,16 @@ VKFingerprint is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
+use_frameworks!
 pod "VKFingerprint"
 ```
 
+## Usage
+See example project.
+
 ## Author
 
-Viacheslav Karamov, vkaramov@waverleysoftware.com
+Viacheslav Karamov
 
 ## License
 

@@ -1,0 +1,25 @@
+{
+  "name": "VKFingerprint",
+  "version": "0.1.0",
+  "summary": "A short description of VKFingerprint.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/VKFingerprint",
+  "license": "MIT",
+  "authors": {
+    "Viacheslav Karamov": "vkaramov@waverleysoftware.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/VKFingerprint.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "VKFingerprint": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+PODS:
+  - VKFingerprint (0.1.0)
+
+DEPENDENCIES:
+  - VKFingerprint (from `../`)
+
+EXTERNAL SOURCES:
+  VKFingerprint:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  VKFingerprint: 0cb63ef917bac939c8fbc5b3bc250c6a48c45cb0
+
+COCOAPODS: 0.38.2
