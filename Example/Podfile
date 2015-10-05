@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'VKFingerprint_Example', :exclusive => true do
+  pod "VKFingerprint", :path => "../"
+end
+
+target 'VKFingerprint_Tests', :exclusive => true do
+  pod "VKFingerprint", :path => "../"
+
+  
+end
