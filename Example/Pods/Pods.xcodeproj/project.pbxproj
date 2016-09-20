@@ -17,8 +17,8 @@
 		C1BF98303FE365A5DBC6E277072F5359 /* Pods-VKFingerprint_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B75714A621EBA322B520C005ED904A /* Pods-VKFingerprint_Tests-dummy.m */; };
 		D89CB3687D9C99B0F8935BF4C6BBA0E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03537BA95F85489E078357D35707B1B /* Foundation.framework */; };
 		EC042F7081AC6048EDDD6EADBCA200D6 /* VKFingerprint-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B98BC39E433D54F895E377111005D8 /* VKFingerprint-dummy.m */; };
-		EF14EBD91BC2AE3700C09CE1 /* VKFingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14EBD71BC2AE3700C09CE1 /* VKFingerprint.swift */; settings = {ASSET_TAGS = (); }; };
-		EF14EBDA1BC2AE3700C09CE1 /* VKKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14EBD81BC2AE3700C09CE1 /* VKKeychain.swift */; settings = {ASSET_TAGS = (); }; };
+		EF14EBD91BC2AE3700C09CE1 /* VKFingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14EBD71BC2AE3700C09CE1 /* VKFingerprint.swift */; };
+		EF14EBDA1BC2AE3700C09CE1 /* VKKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14EBD81BC2AE3700C09CE1 /* VKKeychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -361,6 +361,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					042E60EC50716203BEEA41BCBE22312F = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -556,6 +561,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -694,6 +700,7 @@
 				PRODUCT_NAME = VKFingerprint;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

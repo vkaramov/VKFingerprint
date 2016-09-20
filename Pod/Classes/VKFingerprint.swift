@@ -9,9 +9,9 @@
 import Foundation
 import LocalAuthentication
 
-public typealias VKKeychainCompletion = Bool -> Void;
-public typealias VKKeychainCompletionWithValue = (error : NSError?, value : NSData?) -> Void;
-public typealias VKKeychainCompletionWithString = (error : NSError?, value : NSString?) -> Void;
+public typealias VKKeychainCompletion = (Bool) -> Void;
+public typealias VKKeychainCompletionWithValue = (_ error : NSError?, _ value : Data?) -> Void;
+public typealias VKKeychainCompletionWithString = (_ error : NSError?, _ value : NSString?) -> Void;
 
 /**
 Fingerprint scanner availablity state
@@ -22,18 +22,18 @@ Fingerprint scanner availablity state
 */
 public enum VKFingerprintState
 {
-    case Unavailable, Available, Configured;
+    case unavailable, available, configured;
 }
 
 /// Simple Fingerprint Swift wrapper for iOS
-public class VKFingerprint : NSObject
+open class VKFingerprint : NSObject
 {
     /// Human-readable label
-    public var label : NSString = ""
+    open var label : NSString = ""
     /// Access group. Access groups can be used to share keychain items among two or more applications. For applications to share a keychain item, the applications must have a common access group listed in their keychain-access-groups entitlement
-    public var accessGroup : NSString? = nil
+    open var accessGroup : NSString? = nil
     /// Service associated with this item. See Security.kSecAttrService constant for details
-    public var service : NSString = NSBundle.mainBundle().bundleIdentifier ?? "default_service"
+    open var service : NSString = Bundle.main.bundleIdentifier as NSString? ?? "default_service"
     
     /**
     Convenience intializer
@@ -60,26 +60,26 @@ public class VKFingerprint : NSObject
     }
     
     /// Returns Fingerprint scanner availability state
-    public var availabilityState : VKFingerprintState
+    open var availabilityState : VKFingerprintState
     {
         let context = LAContext();
         var error:NSError?
-        let evaluated = context.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: &error)
+        let evaluated = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
         if let error = error
         {
             NSLog("Failed to initialize fingerprint scanner: %@", error);
-            let laError = LAError(rawValue: error.code)!
+            let laError = LAError.Code(rawValue: error.code)!
             switch laError
             {
-            case .TouchIDNotAvailable, .PasscodeNotSet:
-                return .Unavailable
+            case .touchIDNotAvailable, .passcodeNotSet:
+                return .unavailable
             default:
                 // In iOS 8.0 & 8.1 .PasscodeNotSet might be returned for the devices which doesn't support TouchID
                 // To not compare with the list of devices, I've just set minimum supported version to 8.2. Profit!
-                return .Available
+                return .available
             }
         }
-        return evaluated ? .Configured :.Unavailable
+        return evaluated ? .configured :.unavailable
     }
     
     /**
@@ -89,11 +89,11 @@ public class VKFingerprint : NSObject
     - parameter key:        Key to store value for
     - parameter completion: Optional completion block. Will be dispatched to the main thread
     */
-    public func setValue(value: NSData, forKey key: NSString, completion:VKKeychainCompletion?)
+    open func setValue(_ value: Data, forKey key: NSString, completion:VKKeychainCompletion?)
     {
-        let keychain = VKKeychain(label: label, touchIdEnabled: (.Configured == availabilityState) && touchIdEnabled, accessGroup: accessGroup, service: service);
+        let keychain = VKKeychain(label: label, touchIdEnabled: (.configured == availabilityState) && touchIdEnabled, accessGroup: accessGroup, service: service);
         
-        dispatch_async(queue) { () -> Void in
+        queue.async { () -> Void in
             var success = true;
             do
             {
@@ -106,7 +106,7 @@ public class VKFingerprint : NSObject
             }
             if let completion = completion
             {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
                     completion(success);
                 })
             }
@@ -120,9 +120,9 @@ public class VKFingerprint : NSObject
     - parameter key:        Key to store value for
     - parameter completion: Optional completion block. Will be dispatched to the main thread
     */
-    public func setStringValue(value : NSString, forKey key : NSString, completion : VKKeychainCompletion?)
+    open func setStringValue(_ value : NSString, forKey key : NSString, completion : VKKeychainCompletion?)
     {
-        let data = value.dataUsingEncoding(NSUTF8StringEncoding)!;
+        let data = value.data(using: String.Encoding.utf8.rawValue)!;
         setValue(data, forKey: key, completion: completion);
     }
     
@@ -132,12 +132,12 @@ public class VKFingerprint : NSObject
     - parameter key:        Key to read value for
     - parameter completion: Completion block. Will be dispatched to the main thread
     */
-    public func getValue(forKey key: NSString, completion:VKKeychainCompletionWithValue)
+    open func getValue(forKey key: NSString, completion:@escaping VKKeychainCompletionWithValue)
     {
-        let keychain = VKKeychain(label: label, touchIdEnabled: (.Configured == availabilityState) && touchIdEnabled, accessGroup: accessGroup, service: service);
+        let keychain = VKKeychain(label: label, touchIdEnabled: (.configured == availabilityState) && touchIdEnabled, accessGroup: accessGroup, service: service);
         
-        dispatch_async(queue) { () -> Void in
-            var data:NSData? = nil;
+        queue.async { () -> Void in
+            var data:Data? = nil;
             var error:NSError? = nil;
             do
             {
@@ -148,8 +148,8 @@ public class VKFingerprint : NSObject
                 error = err;
                 NSLog("Failed to get keychain value: ", err);
             }
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                completion(error: error, value: data);
+            DispatchQueue.main.async(execute: { () -> Void in
+                completion(error, data);
             })
         }
     }
@@ -160,11 +160,11 @@ public class VKFingerprint : NSObject
     - parameter key:        Key to read value for
     - parameter completion: Completion block. Will be dispatched to the main thread
     */
-    public func getString(forKey key: NSString, completion:VKKeychainCompletionWithString)
+    open func getString(forKey key: NSString, completion:@escaping VKKeychainCompletionWithString)
     {
-        getValue(forKey: key) { (error:NSError?, value:NSData?) -> Void in
-            let stringValue = value != nil ? NSString(data: value!, encoding: NSUTF8StringEncoding) : nil;
-            completion(error: error, value: stringValue);
+        getValue(forKey: key) { (error:NSError?, value:Data?) -> Void in
+            let stringValue = value != nil ? NSString(data: value!, encoding: String.Encoding.utf8.rawValue) : nil;
+            completion(error, stringValue);
         };
     }
     
@@ -174,7 +174,7 @@ public class VKFingerprint : NSObject
     - parameter key:        Key to remove value for
     - parameter completion: Optional completion block. Will be dispatched to the main thread
     */
-    public func resetValue(forKey key:NSString, completion:VKKeychainCompletion?)
+    open func resetValue(forKey key:NSString, completion:VKKeychainCompletion?)
     {
         let keychain = VKKeychain();
         
@@ -184,7 +184,7 @@ public class VKFingerprint : NSObject
         
         keychain.service = service;
         
-        dispatch_async(queue) { () -> Void in
+        queue.async { () -> Void in
             var success = true;
             do
             {
@@ -197,7 +197,7 @@ public class VKFingerprint : NSObject
             }
             if let completion = completion
             {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
                     completion(success);
                 })
             }
@@ -210,7 +210,7 @@ public class VKFingerprint : NSObject
     
     - parameter completion: Completion block. Will be dispatched to the main thread
     */
-    public func validateValue(completion:VKKeychainCompletion)
+    open func validateValue(_ completion:@escaping VKKeychainCompletion)
     {
         let keychain = VKKeychain();
         keychain
@@ -219,15 +219,15 @@ public class VKFingerprint : NSObject
             keychain.touchIdEnabled = (.Configured == availabilityState) && touchIdEnabled;
         #endif
         
-        dispatch_async(queue) { () -> Void in
+        queue.async { () -> Void in
             let valid = keychain.hasValidationValue()
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.async(execute: { () -> Void in
                 completion(valid);
             })
         }
     }
     
-    private let queue = dispatch_queue_create("VKFingerprintSerialQueue", DISPATCH_QUEUE_SERIAL);
-    private var touchIdEnabled = false;
+    fileprivate let queue = DispatchQueue(label: "VKFingerprintSerialQueue", attributes: []);
+    fileprivate var touchIdEnabled = false;
 
 }
