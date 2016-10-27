@@ -13,11 +13,11 @@ import Security
 open class VKKeychain : NSObject
 {
     /// Human-readable label
-    open var label : NSString = ""
+    open var label : String = ""
     /// Access group. Access groups can be used to share keychain items among two or more applications. For applications to share a keychain item, the applications must have a common access group listed in their keychain-access-groups entitlement
-    open var accessGroup : NSString? = nil
+    open var accessGroup : String? = nil
     /// Service associated with this item. See Security.kSecAttrService constant for details
-    open var service : NSString = Bundle.main.bundleIdentifier as NSString? ?? "default_service"
+    open var service : String = Bundle.main.bundleIdentifier ?? "default_service"
     /// Should touchID be used. False by dafault. This property is ignored when running in Simulator
     open var touchIdEnabled = false
     
@@ -29,7 +29,7 @@ open class VKKeychain : NSObject
     - parameter accessGroup:    Access group. Access groups can be used to share keychain items among two or more applications. For applications to share a keychain item, the applications must have a common access group listed in their keychain-access-groups entitlement
     - parameter service:        Service associated with this item. See Security.kSecAttrService constant for details. If you pass nil, NSBundle.mainBundle().bundleIdentifier value is used instead.
     */
-    public convenience init(label lb:NSString, touchIdEnabled:Bool, accessGroup:NSString?, service:NSString?)
+    public convenience init(label lb:String, touchIdEnabled:Bool, accessGroup:String?, service:String?)
     {
         self.init()
         self.label = lb
@@ -54,7 +54,7 @@ open class VKKeychain : NSObject
     
     - returns: Corresponding value from the Keychain
     */
-    open func get(_ key:NSString) throws -> Data?
+    open func get(_ key : String) throws -> Data?
     {
         var query = try self.query(key)
         query[kSecReturnData as String] = true as AnyObject?
@@ -85,7 +85,7 @@ open class VKKeychain : NSObject
     
     - throws: NSError on error
     */
-    open func set(_ value: Data, key: NSString) throws
+    open func set(_ value: Data, key: String) throws
     {
         try remove(key)
         
@@ -120,7 +120,7 @@ open class VKKeychain : NSObject
     
     - throws: NSError on error
     */
-    open func update(_ value : Data, key : NSString) throws
+    open func update(_ value : Data, key : String) throws
     {
         let query = try self.query(key)
         let changes = [kSecValueData as String : value]
@@ -139,11 +139,11 @@ open class VKKeychain : NSObject
     
     - throws: NSError on error
     */
-    open func remove(_ key: NSString) throws
+    open func remove(_ key: String) throws
     {
-        let query = [kSecClass as String:kSecClassGenericPassword,
-            kSecAttrService as String : service,
-            kSecAttrAccount as String : key
+        let query : [String:AnyObject] = [kSecClass as String:kSecClassGenericPassword,
+            kSecAttrService as String : service as NSString,
+            kSecAttrAccount as String : key as NSString
         ]
         
         let status = SecItemDelete(query as CFDictionary)
@@ -218,16 +218,16 @@ private extension VKKeychain
         }
     }
     
-    func query(_ key : NSString, value:Data? = nil) throws -> [String: AnyObject]
+    func query(_ key : String, value:Data? = nil) throws -> [String: AnyObject]
     {
         var query:[String:AnyObject] = [kSecClass as String:kSecClassGenericPassword,
-                                        kSecAttrLabel as String   : label,
-                                        kSecAttrService as String : service,
-                                        kSecAttrAccount as String : key
+                                        kSecAttrLabel as String   : label as NSString,
+                                        kSecAttrService as String : service as NSString,
+                                        kSecAttrAccount as String : key as NSString
         ]
         
         #if !TARGET_IPHONE_SIMULATOR
-            query[kSecAttrAccessGroup as String] = accessGroup
+            query[kSecAttrAccessGroup as String] = accessGroup as AnyObject?
         #endif
         
         if (touchIdEnabled)

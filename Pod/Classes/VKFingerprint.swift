@@ -11,7 +11,7 @@ import LocalAuthentication
 
 public typealias VKKeychainCompletion = (Bool) -> Void;
 public typealias VKKeychainCompletionWithValue = (_ error : NSError?, _ value : Data?) -> Void;
-public typealias VKKeychainCompletionWithString = (_ error : NSError?, _ value : NSString?) -> Void;
+public typealias VKKeychainCompletionWithString = (_ error : NSError?, _ value : String?) -> Void;
 
 /**
 Fingerprint scanner availablity state
@@ -29,11 +29,11 @@ public enum VKFingerprintState
 open class VKFingerprint : NSObject
 {
     /// Human-readable label
-    open var label : NSString = ""
+    open var label : String = ""
     /// Access group. Access groups can be used to share keychain items among two or more applications. For applications to share a keychain item, the applications must have a common access group listed in their keychain-access-groups entitlement
-    open var accessGroup : NSString? = nil
+    open var accessGroup : String? = nil
     /// Service associated with this item. See Security.kSecAttrService constant for details
-    open var service : NSString = Bundle.main.bundleIdentifier as NSString? ?? "default_service"
+    open var service : String = Bundle.main.bundleIdentifier ?? "default_service"
     
     /**
     Convenience intializer
@@ -43,14 +43,14 @@ open class VKFingerprint : NSObject
     - parameter accessGroup:    Access group. Access groups can be used to share keychain items among two or more applications. For applications to share a keychain item, the applications must have a common access group listed in their keychain-access-groups entitlement
     - parameter service:        Service associated with this item. See Security.kSecAttrService constant for details. If you pass nil, NSBundle.mainBundle().bundleIdentifier value is used instead.
     */
-    public convenience init(label lb:NSString, touchIdEnabled:Bool, accessGroup:NSString?, service:NSString?)
+    public convenience init(label lb:String, touchIdEnabled:Bool, accessGroup:String?, service:String?)
     {
         self.init();
         self.label = lb
         self.accessGroup = accessGroup
         
         #if !((arch(i386) || arch(x86_64)) && os(iOS))
-            self.touchIdEnabled = (.Configured == availabilityState) && touchIdEnabled
+            self.touchIdEnabled = (.configured == availabilityState) && touchIdEnabled
         #endif
         
         if let service = service
@@ -89,7 +89,7 @@ open class VKFingerprint : NSObject
     - parameter key:        Key to store value for
     - parameter completion: Optional completion block. Will be dispatched to the main thread
     */
-    open func setValue(_ value: Data, forKey key: NSString, completion:VKKeychainCompletion?)
+    open func setValue(_ value: Data, forKey key: String, completion:VKKeychainCompletion?)
     {
         let keychain = VKKeychain(label: label, touchIdEnabled: (.configured == availabilityState) && touchIdEnabled, accessGroup: accessGroup, service: service);
         
@@ -120,10 +120,12 @@ open class VKFingerprint : NSObject
     - parameter key:        Key to store value for
     - parameter completion: Optional completion block. Will be dispatched to the main thread
     */
-    open func setStringValue(_ value : NSString, forKey key : NSString, completion : VKKeychainCompletion?)
+    open func setStringValue(_ value : String, forKey key : String, completion : VKKeychainCompletion?)
     {
-        let data = value.data(using: String.Encoding.utf8.rawValue)!;
-        setValue(data, forKey: key, completion: completion);
+        if let data = value.data(using: .utf8)
+        {
+            setValue(data, forKey: key, completion: completion);
+        }
     }
     
     /**
@@ -132,7 +134,7 @@ open class VKFingerprint : NSObject
     - parameter key:        Key to read value for
     - parameter completion: Completion block. Will be dispatched to the main thread
     */
-    open func getValue(forKey key: NSString, completion:@escaping VKKeychainCompletionWithValue)
+    open func getValue(forKey key: String, completion:@escaping VKKeychainCompletionWithValue)
     {
         let keychain = VKKeychain(label: label, touchIdEnabled: (.configured == availabilityState) && touchIdEnabled, accessGroup: accessGroup, service: service);
         
@@ -160,10 +162,10 @@ open class VKFingerprint : NSObject
     - parameter key:        Key to read value for
     - parameter completion: Completion block. Will be dispatched to the main thread
     */
-    open func getString(forKey key: NSString, completion:@escaping VKKeychainCompletionWithString)
+    open func getString(forKey key: String, completion:@escaping VKKeychainCompletionWithString)
     {
         getValue(forKey: key) { (error:NSError?, value:Data?) -> Void in
-            let stringValue = value != nil ? NSString(data: value!, encoding: String.Encoding.utf8.rawValue) : nil;
+            let stringValue = value != nil ? String(data: value!, encoding: .utf8) : nil;
             completion(error, stringValue);
         };
     }
@@ -179,7 +181,7 @@ open class VKFingerprint : NSObject
         let keychain = VKKeychain();
         
         #if !((arch(i386) || arch(x86_64)) && os(iOS))
-            keychain.touchIdEnabled = (.Configured == availabilityState) && touchIdEnabled;
+            keychain.touchIdEnabled = (.configured == availabilityState) && touchIdEnabled;
         #endif
         
         keychain.service = service;
@@ -188,7 +190,7 @@ open class VKFingerprint : NSObject
             var success = true;
             do
             {
-                try keychain.remove(key);
+                try keychain.remove(key as String);
             }
             catch let error as NSError
             {
@@ -213,10 +215,9 @@ open class VKFingerprint : NSObject
     open func validateValue(_ completion:@escaping VKKeychainCompletion)
     {
         let keychain = VKKeychain();
-        keychain
         
         #if !((arch(i386) || arch(x86_64)) && os(iOS))
-            keychain.touchIdEnabled = (.Configured == availabilityState) && touchIdEnabled;
+            keychain.touchIdEnabled = (.configured == availabilityState) && touchIdEnabled;
         #endif
         
         queue.async { () -> Void in
